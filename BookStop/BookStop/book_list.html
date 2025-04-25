@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookVerse - Book List</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F8F1E4;
+      color: #333333;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: #2C3E50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav {
+      background-color: #2C3E50;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px 0;
+      border-top: 2px solid #4D5D70;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #F4A261;
+    }
+
+    .book-section {
+      display: none;
+      padding: 30px;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .book {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .book-title a {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #2C3E50;
+      text-decoration: none;
+    }
+
+    .book-title a:hover {
+      color: #F4A261;
+    }
+
+    .author {
+      font-size: 0.9em;
+      color: #588157;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">📚BookStop</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book_list.html" class="active">Books</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="trending.html">Trending</a></li>
+        </ul>
+    </nav>
+<nav>
+  <a onclick="showSection('fiction')">Fiction</a>
+  <a onclick="showSection('nonfiction')">Non-Fiction</a>
+  <a onclick="showSection('children')">Children</a>
+</nav>
+
+<!-- Fiction Section -->
+<section id="fiction" class="book-section">
+  <div class="book">
+    <div class="book-title"><a href="bookdet2.html">The Alchemist</a></div>
+    <div class="author">Paulo Coelho</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Book Thief</a></div>
+    <div class="author">Markus Zusak</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="bookdet.html">Harry Potter and the Deathly Hallows</a></div>
+    <div class="author">J.K. Rowling</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">A Thousand Splendid Suns</a></div>
+    <div class="author">Khaled Hosseini</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="bookdet3.html">The Da Vinci Code</a></div>
+    <div class="author">Dan Brown</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Nightingale</a></div>
+    <div class="author">Kristin Hannah</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Shining</a></div>
+    <div class="author">Stephen King</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">All the Light We Cannot See</a></div>
+    <div class="author">Anthony Doerr</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Maze Runner</a></div>
+    <div class="author">James Dashner</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Throne of Glass</a></div>
+    <div class="author">Sarah J. Maas</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Power</a></div>
+    <div class="author">Naomi Alderman</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Red Rising</a></div>
+    <div class="author">Pierce Brown</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Atlas Six</a></div>
+    <div class="author">Olivie Blake</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Dracula</a></div>
+    <div class="author">Bram Stoker</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Exorcist</a></div>
+    <div class="author">William Peter Blatty</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">1984</a></div>
+    <div class="author">George Orwell</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Dune</a></div>
+    <div class="author">Frank Herbert</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Percy Jackson & the Olympians</a></div>
+    <div class="author">Rick Riordan</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Hobbit</a></div>
+    <div class="author">J.R.R. Tolkien</div>
+  </div>
+</section>
+
+<!-- Non-Fiction Section -->
+<section id="nonfiction" class="book-section">
+  <div class="book">
+    <div class="book-title"><a href="#">Atomic Habits</a></div>
+    <div class="author">James Clear</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Diary of a Young Girl</a></div>
+    <div class="author">Anne Frank</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Wings of Fire</a></div>
+    <div class="author">Dr.A.P.J.Abdul Kalam</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Art of War</a></div>
+    <div class="author">Sun Tzu</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Zero to One</a></div>
+    <div class="author">Peter Thiel</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">A Brief History of Time</a></div>
+    <div class="author">Stephen Hawking</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Discovery of India</a></div>
+    <div class="author">Jawaharlal Nehru</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">21 Lessons for the 21st Century</a></div>
+    <div class="author">Yuval Noah Harari</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Becoming</a></div>
+    <div class="author">Michelle Obama</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">I Am Malala</a></div>
+    <div class="author">Malala Yousafzai</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Deep Work</a></div>
+    <div class="author">Cal Newport</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Predictably Irrational</a></div>
+    <div class="author">Dan Ariely</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Cosmos</a></div>
+    <div class="author">Carl Sagan</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Lean Startup</a></div>
+    <div class="author">Eric Ries</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Silk Roads</a></div>
+    <div class="author">Peter Frankopan</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Power of Now</a></div>
+    <div class="author">Eckhart Tolle</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">On Writing: A Memoir of the Craft</a></div>
+    <div class="author">Stephen King</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Ikigai</a></div>
+    <div class="author">Héctor García</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Rich Dad Poor Dad</a></div>
+    <div class="author">Robert Kiyosaki</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Thinking, Fast and Slow</a></div>
+    <div class="author">Daniel Kahneman</div>
+  </div>
+</section>
+
+<!-- Children Section -->
+<section id="children" class="book-section">
+  <div class="book">
+    <div class="book-title"><a href="#">Charlotte's Web</a></div>
+    <div class="author">E.B. White</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Jungle Book</a></div>
+    <div class="author">Rudyard Kipling</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Very Hungry Caterpillar</a></div>
+    <div class="author">Eric Carle</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Blue Umbrella</a></div>
+    <div class="author">Ruskin Bond</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Goodnight Moon</a></div>
+    <div class="author">Margaret Wise</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Magic Tree House</a></div>
+    <div class="author">Mary Pope Osborne</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Grandma's Bag of Stories</a></div>
+    <div class="author">Sudha Murty</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Room on the Broom</a></div>
+    <div class="author">Julia Donaldson</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Wonder</a></div>
+    <div class="author">R.J.Palacio</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">A to Z Mysteries</a></div>
+    <div class="author">Ron Roy</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Llama Llama Red Pajama</a></div>
+    <div class="author">Anna Dewdney</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Snowy Day</a></div>
+    <div class="author">Ezra Jack Keats</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Diary of a Wimpy Kid</a></div>
+    <div class="author">Jeff Kinney</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Boxcar Children</a></div>
+    <div class="author">Gertrude Chandler Warner</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Toto: The Auto</a></div>
+    <div class="author">Radhika Chadha</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">Stuart Little</a></div>
+    <div class="author">E.B.White</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">How to Train Your Dragon</a></div>
+    <div class="author">Cressida Cowell</div>
+  </div>
+  <div class="book">
+    <div class="book-title"><a href="#">The Gruffalo</a></div>
+    <div class="author">Julia Donaldson</div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 BookVerse. All rights reserved.
+</footer>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.book-section');
+    sections.forEach(sec => sec.style.display = 'none');
+    document.getElementById(sectionId).style.display = 'flex';
+  }
+
+  // Show Fiction by default
+  showSection('fiction');
+</script>
+
+</body>
+</html>

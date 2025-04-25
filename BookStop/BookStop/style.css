@@ -1,0 +1,266 @@
+
+/* Base styles */
+:root {
+    --primary: #2C3E50;
+    --background: #F8F1E4;
+    --accent: #F4A261;
+    --text: #333333;
+    --tag: #588157;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+/* Book grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.book-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.book-card a {
+    color: var(--primary);
+    font-style: normal;
+}
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book-card h3 {
+    margin: 1rem 0;
+    color: var(--primary);
+}
+
+.author {
+    color: var(--text);
+    font-style: italic;
+}
+
+.price {
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* Tags and badges */
+.tag {
+    background-color: var(--tag);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+}
+
+/* Book details page */
+.book-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.book-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-info {
+    padding: 1rem;
+}
+.description{
+    padding-top: 5px;
+}
+
+/* About page */
+.about-content {
+    max-width: 800px;
+    max-height: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Buttons */
+.button {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .book-details {
+        grid-template-columns: 1fr;
+    }
+
+    .book-image {
+        text-align: center;
+    }
+
+    .book-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+}
+
+.why-choose-us {
+  background-color: #F8F1E4;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.why-choose-us h3 {
+  color: #2C3E50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.reasons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.reason-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+}
+
+.reason-card h4 {
+  color: #588157;
+  margin-bottom: 0.5rem;
+}
+
+.reason-card p {
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.hero{
+    font-size: 22px;
+}
+.aboutus{
+    line-height: 2.0;
+}
